@@ -2,6 +2,16 @@ header{
     background-color: #d98282;
     margin: -21px -8px;
     padding: 2px 25px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #11465b;
+}
+
+header h1{
+    padding-top: 4px;
+    padding-left: 4px;
 }
 
 .mainbanner{
@@ -12,15 +22,6 @@ header{
     margin: 21px -8px;
     position: relative;
 }
-
-/* .mainbanner h1{
-    color: white;
-    margin: 16px 21px;
-    font-size: 34px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-} */
 
 .main-container h1{
     color: white;
@@ -35,16 +36,33 @@ header{
     color: white;
     margin: 16px 21px;
     font-size: 22px;
-    width: 36%;
+    width: 26%;
+    padding: 10px 0px;
 }
 
-/* .container{
+.search-container{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 36px;
+    margin-left: 29px;
 }
 
-.container div{
+.search-container div{
     flex: 1;
+}
+
+/* .search-container select{
+    border: 2px solid black;
+    padding: 0px 8px;
+    margin-inline: 2px 150px;
+
 } */
+.search-container select{
+    margin: -4px 2px;
+    text-indent: 2px;
+    padding-top: 4px;
+    padding-right: 165px;
+}
+
 
 
