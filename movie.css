@@ -64,6 +64,10 @@ header h1{
     padding-right: 165px;
 }
 
+#genre-list, #language-list{
+    padding-right: 100px;
+}
+
 .search-rating-container{
     text-transform: uppercase;
     margin-top: 36px;
