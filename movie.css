@@ -64,5 +64,34 @@ header h1{
     padding-right: 165px;
 }
 
+.search-rating-container{
+    text-transform: uppercase;
+    margin-top: 36px;
+    margin-left: 29px;
+}
+
+/* .search-rating-container select{
+    margin: -4px 2px;
+    text-indent: 2px;
+    padding-top: 4px;
+    padding-right: 710px;
+} */
+
+.search-rating-container input{
+    margin: -1px 2px;
+    text-align: left;
+    padding-right: 59px;
+    padding-top: 4px;
+    border: 2px solid #a69b9b;
+    border-radius: 6px;
+}
+
+/* .search-rating-container input::-webkit-input-placeholder {
+    color: #bb0c0c !important;
+} */
+
+/* .search-rating-container input ::placeholder{
+    color: black !important;
+} */
 
 
