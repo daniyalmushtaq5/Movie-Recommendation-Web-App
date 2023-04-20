@@ -1,43 +1,32 @@
-// (async function (){
-//     const response = await fetch("./data.json");
-//     const movies = await response.json();
-//     // console.log(movies);
-//     const genre_list = [];
-//     movies.forEach((movie) =>{
-//             // const genre = movie.genres.map((genre) =>{
-//             //     return genre;
-//             console.log(movie.genre);
-//             });
-//             // console.log(genre)
-//             // genre.forEach((value) =>{
-//             //     if(!(genre_list.includes(value)))
-//             //     {
-//             //         genre_list.push(value);
-//             //     }
-//                 // console.log(value);
-//                 // genre_list.push(value);
-//             // })
-//             // if(!(genre_list.includes(genre)))
-//             // {
-//             //     genre_list.push(genre);
-//             // }    
-//             // console.log(genre_list);
-//     });
-//     // console.log(genre_list)
-
-
-// })();
-
 (async function (){
     const response = await fetch("./data.json");
     const movies = await response.json();
+    const genre_select = document.getElementById("genre-list");
+    const year_select = document.getElementById("year-list");
+
     const genre_list = [ "Action", "Science Fiction", "Adventure", "Fantasy", "Thriller", "Animation", "Family", "Comedy", "Crime", "Drama"
                         , "Music", "Romance", "Western", "History", "War", "Horror"]
+    const year_list = []
+
+
+    function getYear()
+    {
+        movies.forEach((movie) => {
+            const val = movie.release_date.split("-")[0];
+            if(!(year_list.includes(val)))
+            {
+                year_list.push(val);
+            }
+        });
+        year_list.sort((a,b) => {
+            return b-a;
+        })
+    }
+    // console.log(year_list);
 
     // console.log(genre_list);
-    const genre_select = document.getElementById("genre-list");
 
-    function Displaylists(element_list)
+    function Displaylists(element_list,element_id)
     {
         element_list.innerHTML = "";
         let count = 1;
@@ -45,9 +34,12 @@
             const option = document.createElement('option');
             option.setAttribute("value", count);
             option.innerHTML = val;
-            genre_select.appendChild(option);
+            element_id.appendChild(option);
             count++;
         });
     }
-    Displaylists(genre_list);
+
+    getYear();
+    Displaylists(genre_list,genre_select);
+    Displaylists(year_list,year_select);
 })();
