@@ -5,6 +5,7 @@
     const year_id = document.getElementById("year-list");
     const lang_id = document.getElementById("language-list");
     const rating_id = document.getElementById("rating-list");
+    const btn_id = document.getElementById("btn-submit");
 
     const genre_list = [ "Action", "Science Fiction", "Adventure", "Fantasy", "Thriller", "Animation", "Family", "Comedy", "Crime", "Drama"
                         , "Music", "Romance", "Western", "History", "War", "Horror"]
@@ -54,12 +55,18 @@
         });
     }
 
+
+    function showMovies(movies_list)
+    {
+        
+    }
+
         
 
     function Searchfun()
     {
-        let genre_result, year_result, lang_result;
-        let genre_val, year_val, lang_val;
+        let genre_result, year_result, lang_result, rating_result;
+        let genre_val, year_val, lang_val, rating_val;
         // genre_id.addEventListener('click', event =>{
         //     genre_val = event.target.value; 
         //     console.log(genre_val);
@@ -75,9 +82,8 @@
         genre_id.addEventListener('change', event =>{
             genre_val = event.target.value;
             console.log(genre_val);
-            genre_result = rating_result.filter(movie => movie.genres.includes(genre_val));
+            genre_result = movies.filter(movie => movie.genres.includes(genre_val));
             console.log(genre_result);
-            Searchfun();
         });
         
 
@@ -96,6 +102,16 @@
             console.log(lang_result);
         });
 
+        rating_id.addEventListener('change', event => {
+            rating_val = +(event.target.value);
+            console.log(rating_val);
+            rating_result = lang_result.filter(movie => movie.vote_average >= rating_val);
+            console.log(rating_result);
+
+            showMovies(rating_result);
+
+            btn_id.addEventListener('click', showMovies);
+        });
         
 
         // const year_val = year_id.value;

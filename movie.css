@@ -41,7 +41,6 @@ header h1{
     font-size: 22px;
     width: 26%;
     padding: 10px 3px;
-
 }
 
 .search-container{
@@ -87,9 +86,13 @@ header h1{
 
 #btn-submit{
     margin-left: 80px;
-    padding: 5px 12px;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
     /* padding-top: 10px; */
 }
+
 
 /* .search-rating-container select{
     margin: -4px 2px;
