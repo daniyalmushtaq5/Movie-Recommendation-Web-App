@@ -25,19 +25,23 @@ header h1{
 
 .main-container h1{
     color: white;
+    background-color: #010102;;
     margin: 16px 21px;
     font-size: 34px;
     font-weight: 700;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: inline-block;
 }
 
 .main-container p{
     color: white;
+    background-color:#010102;;
     margin: 16px 21px;
     font-size: 22px;
     width: 26%;
-    padding: 10px 0px;
+    padding: 10px 3px;
+
 }
 
 .search-container{
@@ -74,6 +78,19 @@ header h1{
     margin-left: 29px;
 }
 
+.search-rating-container select{
+    margin: -4px 2px;
+    text-indent: 2px;
+    padding-top: 4px;
+    padding-right: 165px;
+}
+
+#btn-submit{
+    margin-left: 80px;
+    padding: 5px 12px;
+    /* padding-top: 10px; */
+}
+
 /* .search-rating-container select{
     margin: -4px 2px;
     text-indent: 2px;
@@ -81,14 +98,16 @@ header h1{
     padding-right: 710px;
 } */
 
-.search-rating-container input{
+/* .search-rating-container input{
     margin: -1px 2px;
     text-align: left;
     padding-right: 59px;
     padding-top: 4px;
-    border: 2px solid #a69b9b;
-    border-radius: 6px;
-}
+    border: 1px solid #978787;
+    border-radius: 4px;
+    color: black;
+    background-color: #d5d2d2;
+} */
 
 /* .search-rating-container input::-webkit-input-placeholder {
     color: #bb0c0c !important;
