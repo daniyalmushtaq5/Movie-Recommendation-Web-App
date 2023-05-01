@@ -58,70 +58,66 @@
 
     function showMovies(movies_list)
     {
-        
+
     }
 
-        
+    function filterMovies(genre_val,year_val, lang_val, rating_val)
+    {
+        let result = movies;
+        if(genre_val)
+        {
+            result = result.filter(movie => movie.genres.includes(genre_val));
+        }
+
+        if(year_val)
+        {
+            result = result.filter(movie => movie.release_date.split("-")[0].includes(year_val));
+        }
+
+        if(lang_val)
+        {
+            result = result.filter(movie => movie.original_language.includes(lang_val));
+        }
+
+        if(lang_val)
+        {
+            result = result.filter(movie => movie.vote_average >= rating_val);
+        }
+
+        return result
+    }
 
     function Searchfun()
     {
-        let genre_result, year_result, lang_result, rating_result;
-        let genre_val, year_val, lang_val, rating_val;
-        // genre_id.addEventListener('click', event =>{
-        //     genre_val = event.target.value; 
-        //     console.log(genre_val);
-        // });
-        
-        // let genre_val = genre_id.innerText;
-        // console.log(genre_val);
-
-        // const rating_val = +(rating_ip.value);
-        // const rating_result = movies.filter(movie => movie.vote_average >= rating_val);
-        // console.log(rating_result);
+        let genre_val = null, year_val = null, lang_val = null, rating_val = null;
         
         genre_id.addEventListener('change', event =>{
             genre_val = event.target.value;
             console.log(genre_val);
-            genre_result = movies.filter(movie => movie.genres.includes(genre_val));
-            console.log(genre_result);
+            console.log(filterMovies(genre_val,year_val,lang_val,rating_val));
         });
-        
 
         year_id.addEventListener('change', event =>{
             year_val = event.target.value;
             console.log(year_val);
-            year_result = genre_result.filter(movie => movie.release_date.split("-")[0].includes(year_val));
-            console.log(year_result);
+            console.log(filterMovies(genre_val,year_val,lang_val,rating_val));
+
         });
     
 
         lang_id.addEventListener('change', event => {
             lang_val = event.target.value;
             console.log(lang_val);
-            lang_result = year_result.filter(movie => movie.original_language.includes(lang_val));
-            console.log(lang_result);
+            console.log(filterMovies(genre_val,year_val,lang_val,rating_val));
         });
 
         rating_id.addEventListener('change', event => {
             rating_val = +(event.target.value);
             console.log(rating_val);
-            rating_result = lang_result.filter(movie => movie.vote_average >= rating_val);
-            console.log(rating_result);
-
-            showMovies(rating_result);
-
-            btn_id.addEventListener('click', showMovies);
+            console.log(filterMovies(genre_val,year_val,lang_val,rating_val));
         });
-        
-
-        // const year_val = year_id.value;
-        // const lang_val = lang_id.value;
-        // const rating_val = rating_ip.value;
-        // console.log(genre_val);
-
     }
     
-    // Searchfun(genre_id,"genres");
     Searchfun();
 
     getYear();
