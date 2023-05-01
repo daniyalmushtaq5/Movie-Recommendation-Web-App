@@ -58,6 +58,7 @@
 
     function showMovies(movies_list)
     {
+        
 
     }
 
@@ -84,7 +85,7 @@
             result = result.filter(movie => movie.vote_average >= rating_val);
         }
 
-        return result
+        btn_id.addEventListener("click", showMovies(result));
     }
 
     function Searchfun()
