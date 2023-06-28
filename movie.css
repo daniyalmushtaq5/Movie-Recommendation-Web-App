@@ -93,6 +93,62 @@ header h1{
     /* padding-top: 10px; */
 }
 
+/* #rank-list, #movie-list, #year-list{
+    display: flex;
+    /* list-style: none; */
+/* } */ 
+
+/* .rank{
+    display: flex;
+    list-style: none;
+} */
+
+.attributes {
+    margin: 0px 70px;
+}
+
+.attributes ul{
+    display: flex;
+}
+
+.attributes ul li{
+    list-style: none;
+    padding: 2px 4px;
+} 
+
+
+.movie-table {
+    margin: 22px 40px;
+    /* padding: 1px 26px; */
+    /* border: 2px solid black; */
+    border-radius: 3px;
+}
+
+/* .movie-table thead tr, .movie-table tbody tr {
+    border: 2px solid black;
+} */
+
+/* .movie-table tr{
+    border: 2px solid black;
+} */
+
+
+
+.movie-table .movie-heading, .movie-table .movie-th{
+    /* padding: 5px 85px; */
+    padding: 5px 60px;
+    
+}
+
+.rank-heading, .year-heading, .rank-th, .year-th {
+    /* border-inline-end: 2px solid black; */
+    /* margin: 0px 100px; */
+    padding: 4px 12px;
+
+} 
+
+
+
 
 /* .search-rating-container select{
     margin: -4px 2px;
